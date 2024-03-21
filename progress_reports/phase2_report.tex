@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{lipsum} % For generating dummy text
+\usepackage{graphicx} % For including images
+\usepackage{sectsty} % For section font size customization
+\usepackage{titlesec} % For section spacing customization
+\usepackage{tocloft} % For table of contents customization
+\usepackage{float} % For precise image positioning
+
+% Section title spacing customization
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+% Section font size customization
+\sectionfont{\fontsize{12}{15}\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+
+% Table of contents customization
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cfttoctitlefont}{\hfil\large\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfil}
+
+\title{\vspace{-1.5cm}Project Progress Report \\ \large [YOUR PROJECT TITLE]}
+\author{
+[Group Name]\\
+[Member 1]\\
+[Member 2]\\
+[Member 3]\\
+[Member 4]\\
+[Member 5]
+}
+\date{Georgia State University\\ CSC4780/6780 \& DSCI4780 – Fundamentals of Data Science \\ [Semester YEAR]}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Business Understanding}
+\subsection{Business Problem}
+\lipsum[1-2]
+
+\subsection{Dataset}
+\lipsum[3]
+
+\subsection{Proposed Analytics Solution}
+\lipsum[4-5]
+
+\section{Data Exploration and Preprocessing}
+\subsection{Data Quality Report}
+\lipsum[6]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{path/to/your/image.png}
+\caption{Visualizations of Categorical and Continuous Features in Dataset}
+\end{figure}
+
+\subsection{Missing Values and Outliers}
+\lipsum[7]
+
+\subsection{Normalization}
+\lipsum[8]
+
+\subsection{Transformations}
+\lipsum[9]
+
+\end{document}
+
