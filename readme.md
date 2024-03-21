@@ -15,3 +15,30 @@ H2O Analytics hopes to not only target farmers, water filtration companies, and 
 ## Source
 “Water Quality for Crop Production.” University of Massachusetts Amherst, Center for Agriculture, Food, and the Environment, 19 Apr. 2019. [Link](https://ag.umass.edu/greenhouse-floriculture/greenhouse-best-management-practices-bmp-manual/water-quality-for-crop)
 
+
+## Using Notebook
+
+### Clone the repo
+```bash
+git clone https://github.com/sebastien-andre/Water_Quality_Project.git
+cd Water_Quality_Project
+```
+
+### Set up the env
+- On Mac
+```bash
+python3 -m venv env
+source env/bin/activate
+```
+
+- On Windows
+```bash
+python -m venv env
+.\venv\Scripts\activate
+```
+
+### Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
