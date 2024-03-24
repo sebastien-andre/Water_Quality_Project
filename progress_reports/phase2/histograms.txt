@@ -1,0 +1,3 @@
+First feature shows a normal distribution 
+
+Describe the different distributions that are shown
