@@ -1,0 +1,52 @@
+This phase of the project will be about data exploration. Knowing your data is one of the most
+vital components of your data analytics solution. We do not want oversimplified solutions, but
+we also do not want complex, unfeasible ones. Therefore, try to confine the number of
+descriptive features to 20 in this project. You can have more, if they are important; however, you
+do not need to. If your proposal includes different data modalities (e.g., time series, images,
+graphs, documents etc.), you will again need to explore the characteristics of your data. In such
+cases, please consult with me.
+In this phase, you will explore the data, understand the characteristics of your attributes, identify
+missing values and outliers (then handle them accordingly), normalize your data (if necessary),
+and apply transformations (such as binning, mapping, aggregations, flags, etc.) and [optional]
+feature selection. After exploration, you will create your base table (the dataset that you will use
+for the learning models). This is of course if you are using tabular data. If you want to use other
+modalities, please make sure you follow the necessary preprocessing steps.
+At the end of Phase 2, you are expected to generate a data quality report and a data quality plan.
+Provide explanations for how you perform the data pre-processing steps (handling outliers and
+missing values, selecting features, normalizations, transformations) and create your machine
+learning-ready dataset (analytics base table) for the next phase. You will then submit a progress
+report outlining the work you performed in the first two phases (a template will be provided).
+You will also submit your dataset before and after transformations.
+
+
+Project Progress Report & Original and Pre-processed Dataset [2+2 points]: You will
+submit your project progress report along with the original dataset that you have collected for
+your business objective. Additionally, you will submit your preprocessed and cleaned analytics
+base table or dataset. Please compress them with zip.
+The progress report must be in PDF format and named [GROUP_NAME]_final_report.pdf.
+The raw dataset should be named [LAST_NAME]_original.zip
+The pre-processed data should be named [LAST_NAME]_pp.zip
+In case these files are large, please share these files online (either through your own
+OneDrive/Google Drive or through public sharing services such as Zenodo or figshare). Your
+project will not be considered for grading without a dataset.
+Deadline: March 22, 2024
+
+
+Need:
+0. set up venv and fix github issues
+1. Label features with data type, data scale, description
+2. Missing values
+3. Outliers
+4. Normalize data if necessary
+5. Visualize the data
+6. Handle outliers and missing values 
+
+7. Write out any discoveries 
+8. Choose the model we will be using (list 2)
+
+9. He will upload progress report as an example
+
+In this phase, you will explore the data, understand the characteristics of your attributes, identify
+missing values and outliers (then handle them accordingly), normalize your data (if necessary),
+and apply transformations (such as binning, mapping, aggregations, flags, etc.) and [optional]
+feature selection.
