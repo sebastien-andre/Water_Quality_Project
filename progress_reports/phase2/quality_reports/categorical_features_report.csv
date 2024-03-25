@@ -1,7 +1,0 @@
-Feature,Count,% Missing,Cardinality,Mode,Mode Freq.,Mode %,2nd Mode,2nd Mode Freq.,2nd Mode %
-Color,1047594,0.09,5,Colorless,326033,31.12,Near Colorless,325799,31.1
-Source,1033040,1.48,8,Well,129654,12.55,Aquifer,129609,12.55
-Month,1031654,1.61,12,January,88217,8.55,August,87855,8.52
-Day,1031026,1.67,31,25.0,34192,3.32,10.0,34168,3.31
-Time of Day,1028214,1.94,24,0.0,43267,4.21,5.0,43124,4.19
-Target,1048575,0.0,2,0,807841,77.04,1,240734,22.96
