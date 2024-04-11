@@ -34,7 +34,7 @@ source env/bin/activate
 - On Windows
 ```bash
 python -m venv env
-.\venv\Scripts\activate
+.\env\Scripts\activate
 ```
 
 ### Install dependencies
