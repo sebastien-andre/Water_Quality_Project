@@ -36,7 +36,7 @@ preprocessor = ColumnTransformer(transformers=[
 # Create a pipeline that applies the preprocessor and then fits the KNN model
 model = Pipeline(steps=[
     ('preprocessor', preprocessor),
-    ('classifier', KNeighborsClassifier(n_neighbors=10))  # Increased the number of neighbors
+    ('classifier', KNeighborsClassifier(n_neighbors=10))
 ])
 
 # Split the dataset into features and the target
@@ -62,6 +62,8 @@ print(f'KNN Classifier Accuracy: {accuracy:.2f}')
 # Create a confusion matrix to visualize results
 cm = confusion_matrix(y_test, y_pred)
 sns.heatmap(cm, annot=True, fmt='d')
+plt.xlabel('Predicted labels')
+plt.ylabel('True labels')
 plt.title('KNN Classifier Confusion Matrix')
 plt.show()
 

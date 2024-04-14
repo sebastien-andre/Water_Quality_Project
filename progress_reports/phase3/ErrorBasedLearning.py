@@ -60,6 +60,8 @@ print(f'Logistic Regression Accuracy: {accuracy:.2f}')
 # Create a confusion matrix to visualize results
 cm = confusion_matrix(y_test, y_pred)
 sns.heatmap(cm, annot=True, fmt='d')
+plt.xlabel('Predicted labels')
+plt.ylabel('True labels')
 plt.title('Logistic Regression Confusion Matrix')
 plt.show()
 
