@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-df = pd.read_csv('/Users/sebastienlee/Documents/school/2024/spring_2024/fundamentals_data_science/project-env/preprocessed_dataset/preprocessed_dataset.csv.zip', compression='zip')
+df = pd.read_csv("./preprocessed_dataset/preprocessed_dataset.csv.zip", compression='zip')
 
 # List of categorical features
 categorical_features = ['Color', 'Source', 'Month', 'Day', 'Time of Day']
@@ -36,7 +36,7 @@ X = df.drop('Target', axis=1)
 y = df['Target']
 
 # Split the dataset into training and testing set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Train the KNN model
 model.fit(X_train, y_train)
