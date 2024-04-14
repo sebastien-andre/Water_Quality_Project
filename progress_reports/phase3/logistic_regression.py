@@ -35,7 +35,7 @@ preprocessor = ColumnTransformer(transformers=[
 # Create a pipeline that applies the preprocessor and then fits the logistic regression model
 model = Pipeline(steps=[
     ('preprocessor', preprocessor),
-    ('classifier', LogisticRegression(max_iter=5000))  # Increased max_iter
+    ('classifier', LogisticRegression(max_iter=5000))
 ])
 
 # Split the dataset into features and the target
