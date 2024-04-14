@@ -1,10 +1,10 @@
 # K Nearest Neighbors Model
 
 import pandas as pd
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, roc_curve, roc_auc_score
-from sklearn.preprocessing import OrdinalEncoder
+from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 import matplotlib.pyplot as plt
@@ -15,22 +15,28 @@ df = pd.read_csv("./preprocessed_dataset/preprocessed_dataset.csv.zip", compress
 
 # List of categorical features
 categorical_features = ['Color', 'Source', 'Month', 'Day', 'Time of Day']
+num_features = [col for col in df.columns if col not in categorical_features + ['Target']]  # Adjust this list based on your dataset's actual numeric columns
 
 # Create a transformer for categorical features using Ordinal Encoder
 categorical_transformer = Pipeline(steps=[
     ('encoder', OrdinalEncoder())
 ])
 
+# Create a transformer for numerical features
+numerical_transformer = Pipeline(steps=[
+    ('scaler', StandardScaler())
+])
+
 # Create a column transformer that applies the transformation to certain columns
 preprocessor = ColumnTransformer(transformers=[
-    ('cat', categorical_transformer, categorical_features)],
-    remainder='passthrough'
-)
+    ('cat', categorical_transformer, categorical_features),
+    ('num', numerical_transformer, num_features)
+], remainder='passthrough')
 
 # Create a pipeline that applies the preprocessor and then fits the KNN model
 model = Pipeline(steps=[
     ('preprocessor', preprocessor),
-    ('classifier', KNeighborsClassifier(n_neighbors=5))
+    ('classifier', KNeighborsClassifier(n_neighbors=10))  # Increased the number of neighbors
 ])
 
 # Split the dataset into features and the target
