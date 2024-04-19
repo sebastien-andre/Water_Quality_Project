@@ -12,7 +12,7 @@ import seaborn as sns
 
 # Load the dataset
 # df = pd.read_csv("./preprocessed_dataset/preprocessed_dataset.csv.zip", compression='zip')
-# 
+
 # # List of features
 # features = df.columns.tolist()
 # features.remove("Target")  # Remove the target variable from features
@@ -68,7 +68,8 @@ import seaborn as sns
 # )
 
 # Load the dataset
-df = pd.read_csv("./preprocessed_dataset/preprocessed_dataset.csv.zip", compression='zip')
+df1 = pd.read_csv("./preprocessed_dataset/preprocessed_dataset.csv.zip", compression='zip')
+df = df1.sample(frac=0.05)
 
 # Drop the 'Day' and 'Time of Day' columns from the DataFrame
 df = df.drop(['Day', 'Time of Day', 'Index'], axis=1)
