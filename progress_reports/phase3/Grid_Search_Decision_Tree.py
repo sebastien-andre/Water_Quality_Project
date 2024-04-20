@@ -70,6 +70,7 @@ import seaborn as sns
 
 # Load the dataset
 df = pd.read_csv("./preprocessed_dataset/preprocessed_dataset.csv.zip", compression='zip')
+df = df.sample(frac=.5)
 
 # Drop the 'Day' and 'Time of Day' columns from the DataFrame
 df = df.drop(['Day', 'Time of Day', 'Index'], axis=1)
@@ -105,7 +106,7 @@ model = Pipeline(steps=[
 # Define the hyperparameters grid
 param_grid = {
     'classifier__n_estimators': [100, 200, 300],  # Adjust the number of estimators
-    'classifier__max_depth': [None, 10, 15],
+    'classifier__max_depth': [10, 15],
     'classifier__min_samples_split': [5, 10, 15],
     'classifier__min_samples_leaf': [2, 4, 6],
     'classifier__max_features': ['sqrt', 'log2'] 
